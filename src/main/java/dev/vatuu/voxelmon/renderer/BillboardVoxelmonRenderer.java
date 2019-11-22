@@ -1,9 +1,8 @@
 package dev.vatuu.voxelmon.renderer;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import dev.vatuu.voxelmon.api.mon.VoxelSpecies;
+import dev.vatuu.voxelmon.api.species.IVoxelSpecies;
 import dev.vatuu.voxelmon.entities.VoxelmonEntity;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.minecraft.client.render.BufferBuilder;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.VertexFormats;
@@ -13,7 +12,7 @@ import net.minecraft.entity.EntityPose;
 
 public class BillboardVoxelmonRenderer extends AbstractVoxelmonRenderer{
 
-    public BillboardVoxelmonRenderer(EntityRenderDispatcher renderer, VoxelSpecies mon){
+    public BillboardVoxelmonRenderer(EntityRenderDispatcher renderer, IVoxelSpecies mon){
         super(renderer, mon);
     }
 

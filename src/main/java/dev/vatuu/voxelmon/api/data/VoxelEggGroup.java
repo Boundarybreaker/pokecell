@@ -1,7 +1,7 @@
 package dev.vatuu.voxelmon.api.data;
 
 //TODO: string forms
-public enum EggGroup {
+public enum VoxelEggGroup {
 	MONSTER("monster"),
 	AMPHIBIOUS("amphibious"),
 	BUG("bug"),
@@ -20,7 +20,7 @@ public enum EggGroup {
 
 	private final String name;
 
-	EggGroup(String name) {
+	VoxelEggGroup(String name) {
 		this.name = name;
 	}
 
@@ -28,8 +28,8 @@ public enum EggGroup {
 		return name;
 	}
 
-	public static EggGroup forName(String name) {
-		for (EggGroup group : EggGroup.values()) {
+	public static VoxelEggGroup forName(String name) {
+		for (VoxelEggGroup group : VoxelEggGroup.values()) {
 			if (group.getName().equals(name)) {
 				return group;
 			}

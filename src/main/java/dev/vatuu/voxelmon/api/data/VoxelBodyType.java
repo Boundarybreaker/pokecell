@@ -1,7 +1,7 @@
 package dev.vatuu.voxelmon.api.data;
 
 //TODO: string forms
-public enum BodyType {
+public enum VoxelBodyType {
 	HEAD_ONLY("head_only"),
 	HEAD_AND_LEGS("head_and_legs"),
 	FINS("fins"),
@@ -19,7 +19,7 @@ public enum BodyType {
 
 	private final String name;
 
-	BodyType(String name) {
+	VoxelBodyType(String name) {
 		this.name = name;
 	}
 
@@ -27,8 +27,8 @@ public enum BodyType {
 		return name;
 	}
 
-	public static BodyType forName(String name) {
-		for (BodyType type : BodyType.values()) {
+	public static VoxelBodyType forName(String name) {
+		for (VoxelBodyType type : VoxelBodyType.values()) {
 			if (type.getName().equals(name)) {
 				return type;
 			}
