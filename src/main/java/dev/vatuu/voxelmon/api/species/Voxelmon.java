@@ -1,4 +1,4 @@
 package dev.vatuu.voxelmon.api.species;
 
-public class VoxelSpecies {
+public class Voxelmon {
 }

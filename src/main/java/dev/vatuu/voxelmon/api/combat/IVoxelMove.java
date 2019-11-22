@@ -1,13 +1,13 @@
 package dev.vatuu.voxelmon.api.combat;
 
-import dev.vatuu.voxelmon.Voxelmon;
+import dev.vatuu.voxelmon.VoxelmonMain;
 import dev.vatuu.voxelmon.api.data.IVoxelType;
 
-public interface IVoxelAttack {
+public interface IVoxelMove {
 	int getPower();
 	int getAccuracy();
 	IVoxelType getType();
-	void doAttackEffects(Voxelmon attacker, Voxelmon defender);
+	void doAttackEffects(VoxelmonMain attacker, VoxelmonMain defender);
 	int getPriority();
 	int getPP();
 	boolean makesContact();

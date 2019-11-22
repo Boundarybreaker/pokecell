@@ -1,15 +1,15 @@
 package dev.vatuu.voxelmon.extensions;
 
-import dev.vatuu.voxelmon.Voxelmon;
+import dev.vatuu.voxelmon.VoxelmonMain;
 import io.github.prospector.modmenu.api.ModMenuApi;
 import net.minecraft.client.gui.screen.Screen;
 
 import java.util.function.Function;
 
-public class ModMenuEntrypoint implements ModMenuApi {
+public class VoxelmonModMenu implements ModMenuApi {
 
     public String getModId(){
-        return Voxelmon.MOD_ID;
+        return VoxelmonMain.MOD_ID;
     }
 
     @Override

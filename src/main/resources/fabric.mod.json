@@ -15,10 +15,10 @@
 
   "entrypoints": {
     "main": [
-      "dev.vatuu.voxelmon.Voxelmon"
+      "dev.vatuu.voxelmon.VoxelmonMain"
     ],
     "modmenu": [
-      "dev.vatuu.voxelmon.extensions.ModMenuEntrypoint"
+      "dev.vatuu.voxelmon.extensions.VoxelmonModMenu"
     ]
   },
 
