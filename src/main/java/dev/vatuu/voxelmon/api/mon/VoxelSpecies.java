@@ -1,8 +1,11 @@
 package dev.vatuu.voxelmon.api.mon;
 
+import dev.vatuu.voxelmon.api.combat.Ability;
+import dev.vatuu.voxelmon.api.data.BodyType;
+import dev.vatuu.voxelmon.api.data.EggGroup;
 import dev.vatuu.voxelmon.api.data.Stat;
 import dev.vatuu.voxelmon.api.data.Type;
-import dev.vatuu.voxelmon.api.move.Move;
+import dev.vatuu.voxelmon.api.combat.Move;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.sound.SoundEvent;
@@ -18,7 +21,12 @@ public interface VoxelSpecies {
 	Object2IntMap<Stat> getBaseStats();
 	Int2ObjectMap<Move> getLevelMoves();
 	Set<Move> getLearnableMoves();
+	Set<Move> getEggMoves();
+	Optional<Move> getEvolutionMove();
 	Object2IntMap<Stat> getEVYields();
+	Ability getPrimaryAbility();
+	Optional<Ability> getSecondaryAbility();
+	Optional<Ability> getHiddenAbility();
 
 	//species data
 	int getDexNumber(); //TODO: figure out a way to not have to manually specify?
@@ -27,7 +35,9 @@ public interface VoxelSpecies {
 	byte getCatchRate();
 	float getHeight();
 	float getWeight();
-	//TODO: body type
+	int getBaseFeidnship();
+	BodyType getBodyType();
+	EggGroup getEggGroup();
 	Identifier getFootprint();
 	SoundEvent getSound();
 	Identifier getModel();

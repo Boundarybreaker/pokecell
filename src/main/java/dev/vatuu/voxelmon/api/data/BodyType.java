@@ -1,0 +1,19 @@
+package dev.vatuu.voxelmon.api.data;
+
+//TODO: string forms
+public enum BodyType {
+	HEAD_ONLY,
+	HEAD_AND_LEGS,
+	FINS,
+	INSECTOID,
+	QUADRUPED,
+	MULTI_WINGED,
+	MULTI_BODY,
+	TENTACLED,
+	HEAD_AND_BASE,
+	BIPEDAL_TAILED,
+	HUMANOID,
+	SINGLE_WINGED,
+	SERPENTINE,
+	HEAD_AND_ARMS
+}

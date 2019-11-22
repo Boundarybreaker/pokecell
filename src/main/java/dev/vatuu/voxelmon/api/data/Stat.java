@@ -1,5 +1,6 @@
 package dev.vatuu.voxelmon.api.data;
 
+//TODO: string forms
 public enum Stat {
 	HP,
 	ATTACK,
