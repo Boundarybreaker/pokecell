@@ -47,6 +47,7 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
 	modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
+	modImplementation "io.github.cottonmc:StaticData:${project.static_data_version}"
 }
 
 processResources {
