@@ -8,4 +8,16 @@ public interface Move {
 	int getAccuracy();
 	Type getType();
 	void doAttackEffects(Voxelmon attacker, Voxelmon defender);
+	int getPriority();
+	int getPP();
+	boolean makesContact();
+	boolean protectBlocks();
+	boolean magicCoatReflects();
+	boolean snatchSteals();
+	boolean mirrorMoveReflects();
+	boolean kingsRockAffects();
+	boolean[][] getPossibleTargets();
+	boolean targetsMultiple();
+
+	//TODO: animation stuff? contest stuff?
 }
