@@ -1,4 +1,4 @@
 package dev.vatuu.voxelmon.api.combat;
 
-public interface Ability {
+public interface IVoxelAbility {
 }

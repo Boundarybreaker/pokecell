@@ -1,6 +1,6 @@
 package dev.vatuu.voxelmon.renderer;
 
-import dev.vatuu.voxelmon.api.mon.VoxelSpecies;
+import dev.vatuu.voxelmon.api.species.IVoxelSpecies;
 import dev.vatuu.voxelmon.entities.VoxelmonEntity;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -10,7 +10,7 @@ public abstract class AbstractVoxelmonRenderer extends EntityRenderer<VoxelmonEn
 
     private Identifier model;
 
-    public AbstractVoxelmonRenderer(EntityRenderDispatcher dispatcher, VoxelSpecies mon){
+    public AbstractVoxelmonRenderer(EntityRenderDispatcher dispatcher, IVoxelSpecies mon){
         super(dispatcher);
         this.model = mon.getModel();
     }
