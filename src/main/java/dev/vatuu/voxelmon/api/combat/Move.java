@@ -1,4 +1,4 @@
-package dev.vatuu.voxelmon.api.move;
+package dev.vatuu.voxelmon.api.combat;
 
 import dev.vatuu.voxelmon.Voxelmon;
 import dev.vatuu.voxelmon.api.data.Type;
