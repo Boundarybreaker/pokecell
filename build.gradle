@@ -38,6 +38,9 @@ minecraft {
 repositories {
 	mavenCentral()
 	maven { url "http://server.bbkr.space:8081/artifactory/libs-release" }
+	maven { url = "https://maven.abusedmaster.xyz/" }
+	maven { url = "https://jitpack.io" }
+	maven { url = "https://maven.pkg.github.com" }
 }
 
 dependencies {
@@ -48,6 +51,21 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
 	modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
 	modImplementation "io.github.cottonmc:StaticData:${project.static_data_version}"
+
+	modImplementation("com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-base:${cardinal_components_version}") {
+		transitive = false
+	}
+	include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-base:${cardinal_components_version}"
+
+	modImplementation("com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}") {
+		transitive = false
+	}
+	include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}"
+
+	modImplementation("com.github.emilyploszaj:trinkets:${trinkets_version}") {
+		transitive = false
+	}
+	include "com.github.emilyploszaj:trinkets:${trinkets_version}"
 }
 
 processResources {
