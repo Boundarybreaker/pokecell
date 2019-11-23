@@ -19,7 +19,7 @@ public interface IVoxelSpecies {
 	IVoxelType getPrimaryType();
 	Optional<IVoxelType> getSecondaryType();
 	Object2IntMap<VoxelStats> getBaseStats();
-	Int2ObjectMap<IVoxelMove> getLevelMoves();
+	Object2IntMap<IVoxelMove> getLevelMoves();
 	Set<IVoxelMove> getLearnableMoves();
 	Set<IVoxelMove> getEggMoves();
 	Optional<IVoxelMove> getEvolutionMove();
