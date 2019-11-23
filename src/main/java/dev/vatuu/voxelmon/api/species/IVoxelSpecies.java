@@ -1,12 +1,8 @@
 package dev.vatuu.voxelmon.api.species;
 
 import dev.vatuu.voxelmon.api.combat.IVoxelAbility;
-import dev.vatuu.voxelmon.api.data.VoxelBodyType;
-import dev.vatuu.voxelmon.api.data.VoxelEggGroup;
-import dev.vatuu.voxelmon.api.data.VoxelStats;
-import dev.vatuu.voxelmon.api.data.IVoxelType;
+import dev.vatuu.voxelmon.api.data.*;
 import dev.vatuu.voxelmon.api.combat.IVoxelMove;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -14,16 +10,18 @@ import net.minecraft.util.Identifier;
 import java.util.Optional;
 import java.util.Set;
 
+//TODO: javadocs
 public interface IVoxelSpecies {
 	//combat data
+	//TODO: form
 	IVoxelType getPrimaryType();
 	Optional<IVoxelType> getSecondaryType();
-	Object2IntMap<VoxelStats> getBaseStats();
+	Object2IntMap<VoxelStat> getBaseStats();
 	Object2IntMap<IVoxelMove> getLevelMoves();
 	Set<IVoxelMove> getLearnableMoves();
 	Set<IVoxelMove> getEggMoves();
 	Optional<IVoxelMove> getEvolutionMove();
-	Object2IntMap<VoxelStats> getEVYields();
+	Object2IntMap<VoxelStat> getEVYields();
 	IVoxelAbility getPrimaryAbility();
 	Optional<IVoxelAbility> getSecondaryAbility();
 	Optional<IVoxelAbility> getHiddenAbility();
@@ -36,6 +34,7 @@ public interface IVoxelSpecies {
 	float getHeight();
 	float getWeight();
 	int getBaseFeidnship();
+	LevelRate getLevelRate();
 	VoxelBodyType getBodyType();
 	VoxelEggGroup getEggGroup();
 	Identifier getFootprint();

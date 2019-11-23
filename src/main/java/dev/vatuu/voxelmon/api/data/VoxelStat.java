@@ -1,7 +1,7 @@
 package dev.vatuu.voxelmon.api.data;
 
 //TODO: string forms
-public enum VoxelStats {
+public enum VoxelStat {
 	HP("hp"),
 	ATTACK("attack"),
 	DEFENSE("defense"),
@@ -11,7 +11,7 @@ public enum VoxelStats {
 
 	private final String name;
 
-	VoxelStats(String name) {
+	VoxelStat(String name) {
 		this.name = name;
 	}
 
@@ -19,8 +19,8 @@ public enum VoxelStats {
 		return name;
 	}
 
-	public static VoxelStats forName(String name) {
-		for (VoxelStats stat : VoxelStats.values()) {
+	public static VoxelStat forName(String name) {
+		for (VoxelStat stat : VoxelStat.values()) {
 			if (stat.getName().equals(name)) {
 				return stat;
 			}

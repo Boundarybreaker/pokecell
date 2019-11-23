@@ -3,6 +3,7 @@ package dev.vatuu.voxelmon.api.combat;
 import dev.vatuu.voxelmon.VoxelmonMain;
 import dev.vatuu.voxelmon.api.data.IVoxelType;
 
+//TODO: javadocs
 public interface IVoxelMove {
 	int getPower();
 	int getAccuracy();
