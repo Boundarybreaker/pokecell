@@ -1,6 +1,6 @@
 package dev.vatuu.voxelmon.api.data;
 
-public enum Effectiveness {
+public enum VoxelTypeEffectiveness {
 	EFFECTIVE,
 	SUPER_EFFECTIVE,
 	NOT_VERY_EFFECTIVE,

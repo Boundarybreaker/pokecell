@@ -62,6 +62,11 @@ dependencies {
 	}
 	include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}"
 
+	modImplementation("com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-item:${cardinal_components_version}") {
+		transitive = false
+	}
+	include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-item:${cardinal_components_version}"
+
 	modImplementation("com.github.emilyploszaj:trinkets:${trinkets_version}") {
 		transitive = false
 	}
