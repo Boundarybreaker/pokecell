@@ -17,13 +17,12 @@ The structure of the binary model file used for the advanced fabric model format
 
 ## Element Table
 
+### Header
+
 | Offset |  Size   |  Type  | Function |
 |--------|---------|--------|----------|
 | 0x00   | 2 Bytes | UInt16 | Amount of entries in the table.
 | 0x02   | 4 Bytes | UInt32 | Total size of the Array in bytes.
-| 0x06   | N* Bytes | Array  | Element Table Data.
-
-* Rounded up to 4 bytes. 
 
 ### Element Object
 
@@ -37,7 +36,7 @@ The structure of the binary model file used for the advanced fabric model format
 | 0x0F   | 4 Bytes | Float32 | Width.
 | 0x13   | 4 Bytes | Float32 | Length.
 | 0x17   | 4 Bytes | Float32 | Height.
-| 0x1B   | 2 Bytes | UInt16  | Texture Data. Index into Texture Table
+| 0x1B   | 2 Bytes | UInt16  | Texture Data. Index into the UV Container list.
 | 0x1F   | 4 Bytes | Float32 | X-Axis Scale. (Optional)
 | 0x23   | 4 Bytes | Float32 | Y-Axis Scale. (Optional)
 | 0x27   | 4 Bytes | Float32 | Z-Axis Scale. (Optional)
@@ -63,4 +62,49 @@ T S S S - R X Y Z
 +----------------- Has Transparency
 ```
 
+## Texture Table
 
+### Header
+
+| Offset |  Size   |  Type  | Function |
+|--------|---------|--------|----------|
+| 0x00   | 4 Bytes | UInt32 | Total size of the Texture Table in bytes.
+| 0x04   | 2 Bytes | UInt16 | Amount of texture entries.
+| 0x06   | 4 Bytes | UInt32 | Offset to the texture array.
+| 0x0A   | 4 Bytes | UInt32 | Total size of the texture array in bytes.
+| 0x0E   | 2 Bytes | UInt16 | Amount of UV container entries.
+| 0x10   | 4 Bytes | UInt32 | Offset to the UV container array.
+| 0x14   | 4 Bytes | UInt32 | Total size of the UV container array in bytes.
+| 0x18   | 2 Bytes | UInt32 | Amount of UV data entries.
+| 0x2A   | 4 Bytes | UInt32 | Offset to the UV data array.   
+| 0x2E   | 4 Bytes | UInt32 | Total size of the UV data array in bytes. 
+
+* Total Size: 34 Bytes
+
+### Texture
+
+| Offset |  Size   |  Type  | Function |
+|--------|---------|--------|----------|
+| 0x00   | 2 Bytes | UInt16 | Texture name. Index into the String table.
+| 0x02   | 2 Bytes | UInt16 | Texture path. Index into the String table.
+
+### UV Container
+
+| Offset |  Size   |  Type  | Function |
+|--------|---------|--------|----------|
+| 0x00   | 2 Bytes | UInt16 | Up Face. Index into the UV data entry.
+| 0x02   | 2 Bytes | UInt16 | Down Face. Index into the UV data entry.
+| 0x04   | 2 Bytes | UInt16 | North Face. Index into the UV data entry.
+| 0x06   | 2 Bytes | UInt16 | South Face. Index into the UV data entry.
+| 0x08   | 2 Bytes | UInt16 | East Face. Index into the UV data entry.
+| 0x0A   | 2 Bytes | UInt16 | West Face. Index into the UV data entry.
+
+### UV Data
+
+| Offset |  Size   |  Type   | Function |
+|--------|---------|---------|----------|
+| 0x00   | 2 Bytes | UInt16  | Texture. Index into the texture path list.
+| 0x02   | 4 Bytes | Float32 | U Coordinate.
+| 0x06   | 4 Bytes | Float32 | U Length.
+| 0x0A   | 4 Bytes | Float32 | V Coordinate.
+| 0x0E   | 4 Bytes | Float32 | V Length.
