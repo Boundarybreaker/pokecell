@@ -5,8 +5,8 @@ The structure of the binary model file used for the advanced fabric model format
 
 | Offset |   Size   | Function |
 |--------|----------|----------|
-| 0x00   | 2 Bytes  | MID in ASCII (TBD)
-| 0x02   | 2 Byte   | Version Byte (We're starting at 0x0000)
+| 0x00   | 3 Bytes  | MID in ASCII (TBD)
+| 0x02   | 1 Byte   | Version Byte (We're starting at 0x0000)
 | 0x04   | 4 Bytes  | Offset to the Element Table, relative to start.
 | 0x08   | 4 Bytes  | Offset to the Texture Table, relative to start.
 | 0x0C   | 4 Bytes  | Offset to the Joints Table, relative to start.
