@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "dev.vatuu.voxelmon.extensions.mixins",
+  "package": "org.voxelmon.voxelmon.extensions.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ]
