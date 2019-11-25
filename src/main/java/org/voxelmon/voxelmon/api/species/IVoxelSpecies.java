@@ -7,6 +7,7 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -25,6 +26,7 @@ public interface IVoxelSpecies {
 	IVoxelAbility getPrimaryAbility();
 	Optional<IVoxelAbility> getSecondaryAbility();
 	Optional<IVoxelAbility> getHiddenAbility();
+	List<IVoxelForm> getPossibleForms();
 
 	//species data
 	int getDexNumber(); //TODO: figure out a way to not have to manually specify?
@@ -33,11 +35,13 @@ public interface IVoxelSpecies {
 	byte getCatchRate();
 	float getHeight();
 	float getWeight();
-	int getBaseFeidnship();
+	int getBaseFriendship();
 	LevelRate getLevelRate();
 	VoxelBodyType getBodyType();
 	VoxelEggGroup getEggGroup();
 	Identifier getFootprint();
+
+	//display data
 	SoundEvent getSound();
 	Identifier getModel();
 }

@@ -30,6 +30,7 @@ public class Voxelmon implements Component {
 	int friendliness;
 	boolean shiny = false;
 	int personality = new Random().nextInt(); //TODO: better personality system?
+	IVoxelForm currentForm;
 	//TODO: form, ribbons
 
 	//live combat info
